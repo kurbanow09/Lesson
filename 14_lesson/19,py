@@ -1,0 +1,10 @@
+word = ["I", "Love", "Python"]
+
+soz = ""
+
+for word in words:
+    soz += words + " "
+
+soz = soz.rstrip()
+
+print(soz)
