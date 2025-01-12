@@ -1,0 +1,5 @@
+soz = input("Enter the string: ")
+print(soz[0])
+print(soz[3])
+print(soz[4])
+print(soz[5])
