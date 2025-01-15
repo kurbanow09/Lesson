@@ -1,0 +1,5 @@
+A={"Kitap":"book",
+   "Nilim":"knowwledge",
+   "Kompyuter":"computer"}
+
+print(A["Kitap"])
