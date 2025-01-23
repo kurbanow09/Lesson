@@ -1,4 +1,3 @@
-# Dükanyň maglumatlary
 dukanyň_harytlary = {
     "alma": {"bahasy": 15, "mukdary": 20},
     "banan": {"bahasy": 30, "mukdary": 10},
@@ -6,7 +5,6 @@ dukanyň_harytlary = {
 }
 kassa = 0
 
-# Harytlary görkezmek
 def harytlary_gorkez():
     if dukanyň_harytlary:
         print("\nDükandaky ähli harytlar:")
@@ -15,7 +13,6 @@ def harytlary_gorkez():
     else:
         print("\nDükanda haryt ýok.")
 
-# Haryt satyn almak
 def haryt_satyn_al():
     global kassa
     haryt_ad = input("\nHaýsy harydy satyn almak isleýärsiňiz? ").lower()
@@ -26,7 +23,6 @@ def haryt_satyn_al():
             dukanyň_harytlary[haryt_ad]["mukdary"] -= mukdar
             kassa += bahasy
             print(f"{mukdar} kg {haryt_ad} satyn aldyňyz. Töleg: {bahasy} manat.")
-            # Harydyň mukdary 0 bolsa, ony dükandan aýyr
             if dukanyň_harytlary[haryt_ad]["mukdary"] == 0:
                 del dukanyň_harytlary[haryt_ad]
         else:
@@ -45,7 +41,6 @@ def haryt_gos():
         dukanyň_harytlary[haryt_ad] = {"bahasy": bahasy, "mukdary": mukdary}
         print(f"{haryt_ad} dükana goşuldy.")
 
-# Bahany üýtgetmek
 def bahany_uytget():
     haryt_ad = input("\nHaýsy harydyň bahasyny täzeläsiňiz? ").lower()
     if haryt_ad in dukanyň_harytlary:
@@ -55,7 +50,6 @@ def bahany_uytget():
     else:
         print("Bu haryt dükanda ýok.")
 
-# Harydy aýyrmak
 def haryt_ayyr():
     haryt_ad = input("\nHaýsy harydy aýyrmaly? ").lower()
     if haryt_ad in dukanyň_harytlary:
@@ -64,7 +58,6 @@ def haryt_ayyr():
     else:
         print("Bu haryt dükanda ýok.")
 
-# Mukdary artdyrmak
 def mukdary_artdyr():
     haryt_ad = input("\nHaýsy harydyň mukdaryny artdyrmaly? ").lower()
     if haryt_ad in dukanyň_harytlary:
@@ -74,11 +67,9 @@ def mukdary_artdyr():
     else:
         print("Bu haryt dükanda ýok.")
 
-# Kassany görkezmek
 def kassany_gorkez():
     print(f"\nKassanyň jemi: {kassa} manat.")
 
-# Esasy menýu
 def menu():
     print("\nDükanyň dolandyryş programmasy:")
     print("1. Harytlary görkezip bilmek")
@@ -90,7 +81,6 @@ def menu():
     print("7. Kassany görkezmek")
     print("8. Programmadan çykmak")
 
-# Programma işleýşi
 while True:
     menu()
     saýlaw = input("\nNäme etmeli? (1-8): ")
