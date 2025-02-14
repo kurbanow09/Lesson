@@ -1,0 +1,4 @@
+In uly san: 10
+In kici san: 1
+Jemi: 30
+Ortaca baha: 6.0
